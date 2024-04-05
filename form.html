@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("images/Background.jpeg");
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:#0056b3;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color:#1b74d3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+    <script>
+        // Define a JavaScript function
+        function handleSubmit() {
+          // Your custom code here
+          alert('Form submitted!');
+        }
+      </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Data Collection Form</h2>
+        <h3 style="text-align: center;"> Oil and Gas Company</h3>
+        <form action="submit_data.php" method="post">
+            <label for="Emoployee ID">Emoployee ID</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="First Name">First Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="First Name">Last Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="imageUpload">Upload Image:</label>
+            <input type="file" id="imageUpload" name="image" accept="image/*"><br>
+
+            <label for="videoUpload">Upload Video:</label>
+             <input type="file" id="videoUpload" name="video" accept="video/*"><br>
+
+             <label for="audioUpload">Upload Audio:</label>
+            <input type="file" id="audioUpload" name="audio" accept="audio/*"><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit" onclick="handleSubmit()">
+        </form>
+    </div>
+</body>
+</html>
